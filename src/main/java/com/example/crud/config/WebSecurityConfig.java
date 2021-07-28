@@ -42,8 +42,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
+                .antMatchers("/registerUser","/registerPage").permitAll()
                 .antMatchers("/", "/home").authenticated()//Login required to access home page
-                .anyRequest().hasAuthority("admin")//Admin role required to create, update, delete DB
+                .anyRequest().hasAuthority("admin")
+                //Admin role required to create, update, delete DB
                 .and()
                 .formLogin()
                // .loginPage("/login")
