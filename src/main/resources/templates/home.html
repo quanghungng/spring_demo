@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1>List Product</h1>
-<a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new product</a>
+<a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new product</a>
+<a href="#" class="btn btn-dark" th:href="@{/logout}">Logout</a>
 <br>
 <div th:each="product: ${listProduct}" class="card" style="width: 18rem; display: inline-block;margin-top: 30px;">
     <img src="https://s1.img.yan.vn/YanNews/2167221/201603/20160328-024221-ultspiderman_y1_gal_003_600x776.jpg" class="card-img-top" alt="...">
